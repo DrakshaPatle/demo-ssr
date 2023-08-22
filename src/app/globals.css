@@ -1,27 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.books-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.page-title {
+  color: #333;
+}
+
+.books-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.book-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.book-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 300px;
+  margin: 10px auto;
+  text-align: center;
+  
+  /* Gradient Background */
+  background: linear-gradient(to bottom, #f0dddd, #e0e0e0);
+}
+
+.book-title {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.author-name {
+  color: #666;
 }
